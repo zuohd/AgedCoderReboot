@@ -1,0 +1,78 @@
+name: 年龄歧视反馈（Age Discrimination Report）
+description: 提交你遭遇的年龄相关歧视案例，我们会匿名整理入库，帮助更多大龄技术人避坑。
+title: "[歧视反馈] 公司名 / 岗位名 / 面试轮次"
+labels: [age-discrimination, community-feedback]
+assignees:
+  - agedcoder-admin
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🙏 感谢你愿意分享这段经历，我们将对反馈内容严格保密，仅用于社区维权与信息透明。
+
+        > 请尽量基于事实陈述，避免带有攻击性措辞，我们希望社区成为理性表达与彼此支持的地方。
+
+  - type: input
+    id: company
+    attributes:
+      label: 公司名称（可打码）
+      description: 例如 “某厂A”、“XX科技”
+      placeholder: 某科技公司
+    validations:
+      required: true
+
+  - type: input
+    id: position
+    attributes:
+      label: 岗位名称
+      description: 如：高级前端工程师 / DevOps / 产品经理等
+      placeholder: 高级后端工程师
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 发生了什么？
+      description: 简要描述你在应聘过程中遭遇的歧视性言论或现象
+      placeholder: |
+        例如：
+        - 面试官在第一轮就提到“你这个年龄...”
+        - HR 说“我们团队比较年轻，可能不太适合你”
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: tags
+    attributes:
+      label: 你认为这属于哪类问题？
+      options:
+        - label: 明示年龄为拒绝理由
+        - label: 强调年轻文化/不适合年纪大
+        - label: 岗位JD含“35岁以下优先”或类似措辞
+        - label: 其他（请在上面说明）
+
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: 最终结果
+      options:
+        - 被拒
+        - 主动放弃
+        - 还在进行中
+    validations:
+      required: false
+
+  - type: input
+    id: optional-contact
+    attributes:
+      label: 可选联系方式（邮箱/Telegram/GitHub ID）
+      description: 仅供进一步确认，不会公开（可留空）
+      placeholder: （选填）
+
+  - type: markdown
+    attributes:
+      value: |
+        ✅ 我们承诺不会公开你的身份信息，整理内容时也会打码处理。  
+        🙌 你正在帮助整个社区建立更透明、更友好的求职环境。
+
