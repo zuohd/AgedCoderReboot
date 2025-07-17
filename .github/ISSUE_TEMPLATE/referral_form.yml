@@ -1,0 +1,72 @@
+name: 📨 内推岗位推荐（Referral Submission）
+description: 分享你知道的、适合大龄程序员的岗位内推信息
+title: "[推荐] {{公司}} - {{岗位名称}}"
+labels: [referral, community]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你为社区贡献可信的内推信息 🙏  
+        我们鼓励分享：技术驱动、年龄友好、真实来源的岗位。
+
+  - type: input
+    id: company
+    attributes:
+      label: 公司名称
+      placeholder: 如：火山引擎 / 老码农创业社
+    validations:
+      required: true
+
+  - type: input
+    id: position
+    attributes:
+      label: 推荐岗位名称
+      placeholder: 如：高级后端工程师 / Solidity Dev / 架构师
+    validations:
+      required: true
+
+  - type: input
+    id: stack
+    attributes:
+      label: 岗位技术栈
+      placeholder: 如：Go / React / Solidity / Node.js
+    validations:
+      required: false
+
+  - type: input
+    id: contact
+    attributes:
+      label: 推荐人联系方式（可匿名）
+      placeholder: 微信号、邮箱、GitHub ID（如不愿公开可写“匿名”）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: age_friendly
+    attributes:
+      label: 面试过程是否体现出“年龄友好”态度？
+      options:
+        - ✅ 是，表达积极态度
+        - ⚠️ 中立 / 未提及年龄
+        - ❌ 否，有明显歧视倾向
+    validations:
+      required: true
+
+  - type: textarea
+    id: note
+    attributes:
+      label: 附加说明（可选）
+      description: 可以写清楚岗位亮点、所在部门氛围、远程/居家等情况
+      placeholder: 如：这个岗位为远程制，团队 leader 表示欢迎 35+ 有经验的候选人
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: 你是否同意我们公开发布这条推荐信息？
+      options:
+        - label: 是，我同意公开在 `internal-referrals.md`
+          required: true
